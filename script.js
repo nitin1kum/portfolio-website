@@ -48,16 +48,25 @@ function typeWriterFunction() {
   }
 }
 
-window.onscroll= function(event){
-  const scroll = window.scrollY;
+gsap.registerPlugin(ScrollTrigger);
+
+
+
+function fixHeader(){
+  let scroll = window.scrollY;
+  let margin = 108;
+  if(window.innerWidth < 750){
+    scroll += 110;
+    margin = 56;
+  }
   const header  = document.getElementById("header");
   const heroSection  = document.getElementById("hero-section");
   if(scroll > 150){
       header.classList.add("fix-header");
-      heroSection.style.marginTop = "108px";
+      heroSection.style.marginTop = margin + "px";
       header.style.opacity = 1;
   }
-  else if(scroll > 100 && scroll < 150){
+  else if(scroll > 120 && scroll < 150){
     header.style.opacity = 0;
   }
   else{
@@ -66,6 +75,9 @@ window.onscroll= function(event){
     header.classList.remove("fix-header");
   }
 }
+
+window.onscroll = fixHeader;
+window.ontouchmove = fixHeader;
 
 let selected = 0;
 

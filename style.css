@@ -112,6 +112,7 @@ body {
   align-items: center;
   padding: 1.5rem 3rem;
   background-color: var(--primary);
+  transition: all 500ms ease-in;
 }
 
 .fix-header {
@@ -246,7 +247,7 @@ body {
   }
 
   .name {
-    font-size: 24px;
+    font-size: 25px;
   }
 
   .nav-items {
