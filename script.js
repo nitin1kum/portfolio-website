@@ -124,25 +124,14 @@ function onListChange(num){
 // hamburger
 
 function change(){
+  console.log("first")
   document.getElementById("hamburger").classList.toggle("change-sign");
-  document.getElementById("nav-items").classList.toggle("hide-nav");
+  document.getElementById("responsive-nav-items").classList.toggle("hide-nav");
   document.getElementById("cross").classList.toggle("change-sign");
-  document.getElementById("backdrop").classList.toggle("backdrop-show")
-  console.log(isNav)
-  if(isNav){
-    window.addEventListener("click",eventAction,true);
-  }
-  else{
-    window.removeEventListener("click",eventAction,true);
-  }
 }
 
-document.getElementById("hamburger").addEventListener('click',e=>{
-  if(!isNav){
-    isNav = true;
-    change();
-  }
-})
+document.getElementById("hamburger").addEventListener('click',change);
+document.getElementById("cross").addEventListener('click',change);
 
-document.getElementById("nav-items").addEventListener('click',change);
+document.getElementById("responsive-nav-items").addEventListener('click',change);
 
