@@ -334,7 +334,7 @@ body {
     align-items: center;
   }
 
-  .responsive-nav-items .cross{
+  .responsive-nav-items .nav-close{
     display: none;
   }
 
@@ -369,15 +369,25 @@ body {
     width: 300px;
   }
 
-  .responsive-nav-items .cross{
+  .nav-close{
+    display: none;
     position: absolute;
     top: 10px;
     right: 20px;
-    display: block;
   }
 
   .logo img{
     transform: translateY(-2px);
+  }
+}
+
+@media (max-width : 350px) {
+  .responsive-nav-items .nav-close{
+    display: block;
+  }
+
+  .responsive-nav-items{
+    width: 100%;
   }
 }
 
