@@ -59,7 +59,8 @@ function eventAction(e){
   }
 }
 
-function fixHeader(){
+function fixHeader(e){
+  applyPhysics()
   let scroll = window.scrollY;
   let margin = 108;
   if(window.innerWidth < 750){
@@ -124,7 +125,6 @@ function onListChange(num){
 // hamburger
 
 function change(){
-  console.log("first")
   document.getElementById("hamburger").classList.toggle("change-sign");
   document.getElementById("responsive-nav-items").classList.toggle("hide-nav");
   document.getElementById("cross").classList.toggle("change-sign");
