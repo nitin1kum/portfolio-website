@@ -54,8 +54,8 @@ function updateMouseSpeed(e) {
     let deltaTime = (now - lastTimestamp) / 50;
 
     if (deltaTime > 0) {
-        velocityX = 0.2 * (e.clientX - lastMouseX) / deltaTime;
-        velocityY = 0.2 * (e.clientY - lastMouseY) / deltaTime;
+        velocityX = 0.4 * (e.clientX - lastMouseX) / deltaTime;
+        velocityY = 0.4 * (e.clientY - lastMouseY) / deltaTime;
     }
     console.log(e)
     lastMouseX = e.clientX;
